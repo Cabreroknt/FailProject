@@ -1,9 +1,6 @@
+import java.util.List;
 
-package biblioteca;
-
-import java.util.List; 
-
-public class Usuario {
+public class Biblioteca {
 
   
     private String id;
