@@ -1,5 +1,4 @@
 // Archivo: src/biblioteca/Libro.java
-package biblioteca;
 
 public class Libro {
 
