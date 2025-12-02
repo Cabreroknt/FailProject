@@ -4,14 +4,14 @@ public class Biblioteca {
 
     private String id;
     private String nombre;
-    private int maximoPrestamosSimultaneos;
-    private List<Prestamo> prestamosActivos;
+    private int maximoPrestarsSimultaneos;
+    private List<Prestar> PrestarsActivos;
 
     public Biblioteca(String id, String nombre) {
         this.id = id;
         this.nombre = nombre;
-        this.maximoPrestamosSimultaneos = 3;
-        this.prestamosActivos = null; // o new ArrayList<>();
+        this.maximoPrestarsSimultaneos = 3;
+        this.PrestarsActivos = null; // o new ArrayList<>();
     }
 
     public String getId() {
@@ -22,30 +22,30 @@ public class Biblioteca {
         return nombre;
     }
 
-    public int getMaximoPrestamosSimultaneos() {
-        return maximoPrestamosSimultaneos;
+    public int getMaximoPrestarsSimultaneos() {
+        return maximoPrestarsSimultaneos;
     }
 
-    public void setMaximoPrestamosSimultaneos(int maximoPrestamosSimultaneos) {
-        if (maximoPrestamosSimultaneos < 0) {
-            this.maximoPrestamosSimultaneos = 0;
+    public void setMaximoPrestarsSimultaneos(int maximoPrestarsSimultaneos) {
+        if (maximoPrestarsSimultaneos < 0) {
+            this.maximoPrestarsSimultaneos = 0;
         } else {
-            this.maximoPrestamosSimultaneos = maximoPrestamosSimultaneos;
+            this.maximoPrestarsSimultaneos = maximoPrestarsSimultaneos;
         }
     }
 
-    public List<Prestamo> getPrestamosActivos() {
-        return prestamosActivos; // corregido nombre
+    public List<Prestar> getPrestarsActivos() {
+        return PrestarsActivos; // corregido nombre
     }
 
-    public boolean tieneHuecoParaOtroPrestamo() {
+    public boolean tieneHuecoParaOtroPrestar() {
 
         // Si no hay lista, significa que no tiene préstamos.
-        if (prestamosActivos == null) {
-            return maximoPrestamosSimultaneos > 0;
+        if (PrestarsActivos == null) {
+            return maximoPrestarsSimultaneos > 0;
         }
 
         // Si sí hay lista, comprobamos tamaño.
-        return prestamosActivos.size() < maximoPrestamosSimultaneos;
+        return PrestarsActivos.size() < maximoPrestarsSimultaneos;
     }
 }

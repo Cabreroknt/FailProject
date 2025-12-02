@@ -8,7 +8,7 @@ public class Prestar {
     private LocalDate fechaFinEstimada;
     private boolean devuelto;
 
-    public Prestamo(Usuario usuario, Libro libro, LocalDate fechaInicio, LocalDate fechaFinEstimada) {
+    public Prestar(Usuario usuario, Libro libro, LocalDate fechaInicio, LocalDate fechaFinEstimada) {
         this.usuario = usuario;
         this.libro = libro;
         this.fechaInicio = fechaInicio;
